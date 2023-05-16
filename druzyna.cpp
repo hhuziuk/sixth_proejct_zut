@@ -10,19 +10,3 @@ std::ostream &operator<<(std::ostream &os, const Druzyna &d) {
      << "\033[1;31m" << d.stracone_gole << "\033[0m\n";
   return os;
 }
-
-bool operator>(const Druzyna &a, const Druzyna &b) {
-  if (a.licz_punkty() != b.licz_punkty()) {
-    return a.licz_punkty() > b.licz_punkty();
-  }
-  if (a.wygrane != b.wygrane) {
-    return a.wygrane > b.wygrane;
-  }
-  if (a.przegrane != b.przegrane) {
-    return a.przegrane < b.przegrane;
-  }
-  if (a.gole != b.gole) {
-    return a.gole > b.gole;
-  }
-  return a.stracone_gole < b.stracone_gole;
-}

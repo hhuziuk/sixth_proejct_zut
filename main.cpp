@@ -5,6 +5,27 @@
 
 #include "druzyna.h"
 
+// Перевантаження оператора >
+template<>
+class std::greater<Druzyna> {
+public:
+    bool operator()(const Druzyna& a, const Druzyna& b) const {
+        if (a.licz_punkty() != b.licz_punkty()) {
+            return a.licz_punkty() > b.licz_punkty();
+        }
+        if (a.wygrane != b.wygrane) {
+            return a.wygrane > b.wygrane;
+        }
+        if (a.przegrane != b.przegrane) {
+            return a.przegrane < b.przegrane;
+        }
+        if (a.gole != b.gole) {
+            return a.gole > b.gole;
+        }
+        return a.stracone_gole < b.stracone_gole;
+    }
+};
+
 int main() {
     std::vector<Druzyna> liga = {
         {"Druzyna1", 5, 2, 3, 20, 15}, {"Druzyna2", 4, 5, 1, 15, 10},
