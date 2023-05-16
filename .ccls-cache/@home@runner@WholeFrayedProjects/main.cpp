@@ -54,3 +54,4 @@ int main() {
   for (auto team : liga)
     cout << team << " ";
 }
+//
