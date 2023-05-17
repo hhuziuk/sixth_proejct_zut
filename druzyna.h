@@ -3,11 +3,12 @@
 
 #include <iostream>
 #include <string>
+using namespace std;
 
 class Druzyna {
 public:
 
-std::string nazwa;
+string nazwa;
 int wygrane;
 int remisy;
 int przegrane;
@@ -17,6 +18,6 @@ int stracone_gole;
 int licz_punkty() const;
 };
 
-std::ostream &operator<<(std::ostream &os, const Druzyna &d);
+ostream &operator<<(ostream &os, const Druzyna &d);
 
 #endif
