@@ -5,7 +5,6 @@
 
 #include "druzyna.h"
 
-// Перевантаження оператора >
 template<>
 class std::greater<Druzyna> {
 public:
